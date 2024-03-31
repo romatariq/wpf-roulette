@@ -10,7 +10,7 @@
     <Border 
         BorderBrush="#636363"
         Background="{Binding BackgroundColor}" 
-        CornerRadius="5"
+        CornerRadius="3"
         Margin="3"
         BorderThickness="1">
         <TextBlock 

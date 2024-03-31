@@ -46,7 +46,7 @@
                     <Border
                         Background="{Binding IsRed, Converter={converters:BoolToBackgroundColorConverter}}" 
                         BorderBrush="{Binding IsRed, Converter={converters:BoolToBorderColorConverter}}" 
-                        CornerRadius="5"
+                        CornerRadius="3"
                         Margin="3"
                         BorderThickness="1">
                         <TextBlock
