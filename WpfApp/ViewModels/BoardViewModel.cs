@@ -3,9 +3,8 @@ using Models;
 
 namespace WpfApp.ViewModels;
 
-public class BoardViewModel : BaseViewModel
+public class BoardViewModel
 {
-
     public ObservableCollection<RouletteNumber> Numbers { get; set; } = CreateRouletteTable();
 
     private static ObservableCollection<RouletteNumber> CreateRouletteTable()
