@@ -8,83 +8,87 @@
         mc:Ignorable="d"
         Title="Roulette"
         FontSize="30"
-        MinHeight="450" MinWidth="900" Background="Black"
+        MinHeight="200" MinWidth="400" Background="Black"
         d:DataContext="{d:DesignInstance }">
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="60"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="80"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="66"/>
-        </Grid.ColumnDefinitions>
-        
-        <ItemsControl Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="12" ItemsSource="{Binding Numbers}">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <UniformGrid Rows="3" Columns="12"/>
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Border
-                        Background="{Binding IsRed, Converter={converters:BoolToBackgroundColorConverter}}" 
-                        BorderBrush="{Binding IsRed, Converter={converters:BoolToBorderColorConverter}}" 
-                        CornerRadius="3"
-                        Margin="4"
-                        BorderThickness="1">
-                        <TextBlock
-                            Text="{Binding Number}" 
-                            Foreground="{Binding IsRed, Converter={converters:BoolToForegroundColorConverter}}"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"/>
-                    </Border>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
-        
-        <views:BoardNumberRangeSelectionView Margin="6, 0, 0, 0" Grid.Row="0" Grid.Column="13" Angle="-90" Label="2 to 1" />
-        <views:BoardNumberRangeSelectionView Margin="6, 0, 0, 0" Grid.Row="1" Grid.Column="13" Angle="-90" Label="2 to 1" />
-        <views:BoardNumberRangeSelectionView Margin="6, 0, 0, 0" Grid.Row="2" Grid.Column="13" Angle="-90" Label="2 to 1" />
-        
-        <views:BoardNumberRangeSelectionView Margin="0, 10, 0, 0" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4" Label="1st 12" />
-        <views:BoardNumberRangeSelectionView Margin="0, 10, 0, 0" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="4" Label="2nd 12" />
-        <views:BoardNumberRangeSelectionView Margin="0, 10, 0, 0" Grid.Row="3" Grid.Column="9" Grid.ColumnSpan="4" Label="3rd 12" />
-        
-        <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Label="1 to 18" />
-        <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2" Label="Even" />
-        <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2" />
-        <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="2" BackgroundColor="#bb1216" />
-        <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="9" Grid.ColumnSpan="2" Label="Odd" />
-        <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="11" Grid.ColumnSpan="2" Label="19 to 36" />
-        
-        <Border
-            Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"
-            Background="#009900" 
-            CornerRadius="30 5 5 30"
-            Margin="3">
-            <TextBlock 
-                Text="0" 
-                Foreground="#fcfeff"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center" />
+    <Viewbox Stretch="Uniform">
+        <Border Padding="50">
+            <Grid Width="Auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="66"/>
+            </Grid.ColumnDefinitions>
+            
+            <ItemsControl Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="12" ItemsSource="{Binding Numbers}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="3" Columns="12"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border
+                            Background="{Binding IsRed, Converter={converters:BoolToBackgroundColorConverter}}" 
+                            BorderBrush="{Binding IsRed, Converter={converters:BoolToBorderColorConverter}}" 
+                            CornerRadius="3"
+                            Margin="4"
+                            BorderThickness="1">
+                            <TextBlock
+                                Text="{Binding Number}" 
+                                Foreground="{Binding IsRed, Converter={converters:BoolToForegroundColorConverter}}"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"/>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            
+            <views:BoardNumberRangeSelectionView Margin="6, 0, 0, 0" Grid.Row="0" Grid.Column="13" Angle="-90" Label="2 to 1" />
+            <views:BoardNumberRangeSelectionView Margin="6, 0, 0, 0" Grid.Row="1" Grid.Column="13" Angle="-90" Label="2 to 1" />
+            <views:BoardNumberRangeSelectionView Margin="6, 0, 0, 0" Grid.Row="2" Grid.Column="13" Angle="-90" Label="2 to 1" />
+            
+            <views:BoardNumberRangeSelectionView Margin="0, 10, 0, 0" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4" Label="1st 12" />
+            <views:BoardNumberRangeSelectionView Margin="0, 10, 0, 0" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="4" Label="2nd 12" />
+            <views:BoardNumberRangeSelectionView Margin="0, 10, 0, 0" Grid.Row="3" Grid.Column="9" Grid.ColumnSpan="4" Label="3rd 12" />
+            
+            <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Label="1 to 18" />
+            <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2" Label="Even" />
+            <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2" />
+            <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="2" BackgroundColor="#bb1216" />
+            <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="9" Grid.ColumnSpan="2" Label="Odd" />
+            <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="11" Grid.ColumnSpan="2" Label="19 to 36" />
+            
+            <Border
+                Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"
+                Background="#009900" 
+                CornerRadius="30 5 5 30"
+                Margin="3">
+                <TextBlock 
+                    Text="0" 
+                    Foreground="#fcfeff"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center" />
+            </Border>
+            
+        </Grid>
         </Border>
-        
-    </Grid>
+    </Viewbox>
 </Window>
