@@ -76,17 +76,24 @@
             <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="9" Grid.ColumnSpan="2" Label="Odd" />
             <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="11" Grid.ColumnSpan="2" Label="19 to 36" />
             
-            <Border
+            <Path
                 Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"
-                Background="#009900" 
-                CornerRadius="30 5 5 30"
-                Margin="3">
-                <TextBlock 
-                    Text="0" 
-                    Foreground="#fcfeff"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center" />
-            </Border>
+                Fill="#009900"
+                Margin="4"
+                Width="72"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Stretch="UniformToFill"
+                StrokeLineJoin="Round"
+                Stroke="#009900"
+                StrokeThickness="30"
+                Data="M0,0 L20,-140 L100,-140 L100,140 L20,140 Z"/>
+            <TextBlock 
+                Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"
+                Text="0" 
+                Foreground="#fcfeff"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" />
             
         </Grid>
         </Border>
