@@ -11,7 +11,7 @@
         BorderBrush="#636363"
         Background="{Binding BackgroundColor}" 
         CornerRadius="3"
-        Margin="3"
+        Margin="4"
         BorderThickness="1">
         <TextBlock 
             Text="{Binding Label}" 
