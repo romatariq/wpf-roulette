@@ -9,7 +9,7 @@
         Title="Roulette"
         FontSize="30"
         MinHeight="200" MinWidth="400" Background="Black"
-        d:DataContext="{d:DesignInstance }">
+        d:DataContext="{d:DesignInstance}">
     <Viewbox Stretch="Uniform">
         <Border Padding="50">
             <Grid Width="Auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -46,14 +46,14 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Border
-                            Background="{Binding IsRed, Converter={converters:BoolToBackgroundColorConverter}}" 
-                            BorderBrush="{Binding IsRed, Converter={converters:BoolToBorderColorConverter}}" 
+                            Background="{Binding Color, Converter={converters:EnumToBackgroundColorConverter}}" 
+                            BorderBrush="{Binding Color, Converter={converters:EnumToBorderColorConverter}}" 
                             CornerRadius="3"
                             Margin="4"
                             BorderThickness="1">
                             <TextBlock
                                 Text="{Binding Number}" 
-                                Foreground="{Binding IsRed, Converter={converters:BoolToForegroundColorConverter}}"
+                                Foreground="{Binding Color, Converter={converters:EnumToForegroundColorConverter}}"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"/>
                         </Border>

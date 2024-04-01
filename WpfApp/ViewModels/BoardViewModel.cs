@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using Models;
+using Models.Enums;
 
 namespace WpfApp.ViewModels;
 
@@ -21,7 +22,7 @@ public class BoardViewModel
                 numbers.Add(new RouletteNumber
                 {
                     Number = number.ToString(),
-                    IsRed = reds.Contains(number)
+                    Color = reds.Contains(number) ? EColor.Red : EColor.Black
                 });
             }
         }
