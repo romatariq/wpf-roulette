@@ -3,5 +3,6 @@ namespace Models.Enums;
 public enum EColor
 {
     Red,
-    Black
+    Black,
+    Dark
 }

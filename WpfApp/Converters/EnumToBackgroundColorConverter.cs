@@ -17,6 +17,7 @@ public class EnumToBackgroundColorConverter : BaseConverter<EnumToBackgroundColo
         {
             EColor.Red => "#bb1216",
             EColor.Black => "#0f1606",
+            EColor.Dark => "#010101",
             _ => defaultColor
         };
     }

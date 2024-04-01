@@ -1,5 +1,6 @@
 using System.Windows;
 using System.Windows.Controls;
+using Models.Enums;
 
 namespace WpfApp.Views;
 
@@ -9,7 +10,7 @@ public partial class BoardNumberRangeSelectionView : UserControl
         DependencyProperty.Register(nameof(Angle), typeof(int), typeof(BoardNumberRangeSelectionView));
     
     public static readonly DependencyProperty BackgroundColorProperty =
-        DependencyProperty.Register(nameof(BackgroundColor), typeof(string), typeof(BoardNumberRangeSelectionView));
+        DependencyProperty.Register(nameof(BackgroundColor), typeof(EColor), typeof(BoardNumberRangeSelectionView));
     
     public static readonly DependencyProperty LabelProperty =
         DependencyProperty.Register(nameof(Label), typeof(string), typeof(BoardNumberRangeSelectionView));
@@ -20,9 +21,9 @@ public partial class BoardNumberRangeSelectionView : UserControl
         set => SetValue(AngleProperty, value);
     }
     
-    public string BackgroundColor
+    public EColor BackgroundColor
     {
-        get => (string) GetValue(BackgroundColorProperty);
+        get => (EColor) GetValue(BackgroundColorProperty);
         set => SetValue(BackgroundColorProperty, value);
     }
     
