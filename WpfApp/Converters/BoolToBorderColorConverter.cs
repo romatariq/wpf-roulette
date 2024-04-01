@@ -1,14 +1,10 @@
 using System.Globalization;
-using System.Windows.Data;
-using System.Windows.Markup;
 
 namespace WpfApp.Converters;
 
-public class BoolToBorderColorConverter : MarkupExtension, IValueConverter
+public class BoolToBorderColorConverter : BaseConverter<BoolToBorderColorConverter>
 {
-    private static BoolToBorderColorConverter? _converter;
-    
-    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
         if ((bool)value)
         {
@@ -16,15 +12,5 @@ public class BoolToBorderColorConverter : MarkupExtension, IValueConverter
         }
 
         return "#008d7a";
-    }
-
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-        throw new NotImplementedException();
-    }
-
-    public override object ProvideValue(IServiceProvider serviceProvider)
-    {
-        return _converter ??= new BoolToBorderColorConverter();
     }
 }
