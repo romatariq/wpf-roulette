@@ -51,7 +51,7 @@
                             BorderBrush="{Binding Color, Converter={converters:EnumToBorderColorConverter}}" 
                             CornerRadius="3"
                             Margin="4"
-                            BorderThickness="1">
+                            BorderThickness="1.5">
                             <TextBlock
                                 Text="{Binding Number}" 
                                 Foreground="{Binding Color, Converter={converters:EnumToForegroundColorConverter}}"
