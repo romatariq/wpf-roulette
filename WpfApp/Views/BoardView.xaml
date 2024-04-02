@@ -77,19 +77,14 @@
             <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="9" Grid.ColumnSpan="2" BackgroundColor="{x:Static enums:EColor.Dark}" Label="Odd" />
             <views:BoardNumberRangeSelectionView Grid.Row="4" Grid.Column="11" Grid.ColumnSpan="2" BackgroundColor="{x:Static enums:EColor.Dark}" Label="19 to 36" />
             
-            <Path
-                Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"
+            <Path Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"
                 Fill="#009900"
                 Margin="4"
-                Width="72"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Stretch="UniformToFill"
-                StrokeLineJoin="Round"
-                Stroke="#009900"
-                StrokeThickness="30"
-                Data="M0,0 L20,-140 L100,-140 L100,140 L20,140 Z"/>
-            <TextBlock 
+                Data="M127 1.44444C127 1.44444 41 0.444444 36.5 1.44444C32 2.44444 28.5 13.9444 27 20.9444C27 20.9444 0.999968 143.944 1 206.444C1.00003 268.944 26.5 390.444 26.5 390.444C28.971 399.873 33.5 409.944 37.5 409.944C41.5 409.944 125.5 410.444 127 409.944C128.5 409.444 130.5 410.944 130.5 399.944V4.44444C130.5 1.94446 127 1.44444 127 1.44444Z"/>
+           <TextBlock 
                 Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"
                 Text="0" 
                 Foreground="#fcfeff"
